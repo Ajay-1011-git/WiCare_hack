@@ -1,0 +1,19 @@
+{
+  "modelName": "humanbody.glb",
+  "settings": {
+    "cellSize": 3,
+    "tintColor": "#ec3636",
+    "backgroundColor": "#000000",
+    "contrastAdjust": 0.25,
+    "brightnessAdjust": -0.32,
+    "invert": true,
+    "volumeShading": true,
+    "modelScale": 4.2,
+    "modelY": -3.15,
+    "cameraZ": 12,
+    "ambientIntensity": 0,
+    "keyLightIntensity": 7.5,
+    "fillLightIntensity": 1.9
+  },
+  "exportedAt": "2026-07-13T06:33:17.085Z"
+}

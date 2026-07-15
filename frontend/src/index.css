@@ -1,0 +1,3 @@
+/* Global base is provided by dashboard.css (ported from the original prototype).
+   Tailwind is intentionally not imported here — the dashboard is a verbatim CSS port
+   for pixel fidelity, not a Tailwind rebuild. */

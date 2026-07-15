@@ -1,0 +1,280 @@
+{
+  "created": "2026-07-15T03:56:55.149976Z",
+  "deployed": "B",
+  "deployment_note": "Backend uses the deployed model everywhere. Demo heart rate is fabricated (scenario-locked) by the mock server and DOES feed Model B's verdict -- a deliberate, owner-approved choice. Raw payload still stamps source:'mock'. Model A is the no-fabrication fallback.",
+  "normal_class": "Sleep-EDF SC healthy + CAP healthy",
+  "flagged_class": "CAP SDB + PLM + insomnia (NFLE/RBD excluded: EEG-driven, sensor-invisible)",
+  "model_A": {
+    "auc": 0.57792578125,
+    "recall": 1.0,
+    "precision": 0.5348837209302325,
+    "f1": 0.696969696969697,
+    "cm": [
+      [
+        0,
+        1600
+      ],
+      [
+        0,
+        1840
+      ]
+    ],
+    "n": 3440,
+    "n_flagged": 1840,
+    "n_recordings": 43,
+    "cv_folds": 5,
+    "features": [
+      "breathing_rate_bpm",
+      "breathing_var",
+      "motion_index",
+      "sleep_fragmentation_index",
+      "sleep_onset_latency",
+      "breathing_rate_bpm_zbase",
+      "breathing_var_zbase",
+      "motion_index_zbase",
+      "sleep_fragmentation_index_zbase",
+      "breathing_rate_bpm_delta",
+      "breathing_var_delta",
+      "motion_index_delta",
+      "sleep_fragmentation_index_delta"
+    ],
+    "threshold": 0.0011028688733362088
+  },
+  "model_B": {
+    "auc": 0.6273672317865744,
+    "recall": 1.0,
+    "precision": 0.6934939759036145,
+    "f1": 0.8190096755833808,
+    "cm": [
+      [
+        0,
+        636
+      ],
+      [
+        0,
+        1439
+      ]
+    ],
+    "n": 2075,
+    "n_flagged": 1439,
+    "n_recordings": 26,
+    "cv_folds": 5,
+    "features": [
+      "breathing_rate_bpm",
+      "breathing_var",
+      "motion_index",
+      "sleep_fragmentation_index",
+      "sleep_onset_latency",
+      "breathing_rate_bpm_zbase",
+      "breathing_var_zbase",
+      "motion_index_zbase",
+      "sleep_fragmentation_index_zbase",
+      "breathing_rate_bpm_delta",
+      "breathing_var_delta",
+      "motion_index_delta",
+      "sleep_fragmentation_index_delta",
+      "heart_rate_bpm",
+      "heart_rate_bpm_zbase",
+      "heart_rate_bpm_delta"
+    ],
+    "threshold": 0.005947664080226887
+  },
+  "cusum": {
+    "target": 0.45254335916101973,
+    "sigma": 0.3278146196986231,
+    "k": 0.16390730984931154,
+    "h": 1.6390730984931154
+  },
+  "cusum_evaluation": [
+    {
+      "subject": "ins2",
+      "label": 1,
+      "alert_window": NaN,
+      "total_windows": 80,
+      "minutes_to_alert": NaN
+    },
+    {
+      "subject": "ins3",
+      "label": 1,
+      "alert_window": 61.0,
+      "total_windows": 80,
+      "minutes_to_alert": 183.0
+    },
+    {
+      "subject": "ins4",
+      "label": 1,
+      "alert_window": 35.0,
+      "total_windows": 80,
+      "minutes_to_alert": 105.0
+    },
+    {
+      "subject": "ins5",
+      "label": 1,
+      "alert_window": 6.0,
+      "total_windows": 80,
+      "minutes_to_alert": 18.0
+    },
+    {
+      "subject": "ins6",
+      "label": 1,
+      "alert_window": 7.0,
+      "total_windows": 80,
+      "minutes_to_alert": 21.0
+    },
+    {
+      "subject": "ins7",
+      "label": 1,
+      "alert_window": 7.0,
+      "total_windows": 80,
+      "minutes_to_alert": 21.0
+    },
+    {
+      "subject": "ins8",
+      "label": 1,
+      "alert_window": NaN,
+      "total_windows": 80,
+      "minutes_to_alert": NaN
+    },
+    {
+      "subject": "n10",
+      "label": 0,
+      "alert_window": 5.0,
+      "total_windows": 80,
+      "minutes_to_alert": 15.0
+    },
+    {
+      "subject": "n15",
+      "label": 0,
+      "alert_window": NaN,
+      "total_windows": 80,
+      "minutes_to_alert": NaN
+    },
+    {
+      "subject": "n2",
+      "label": 0,
+      "alert_window": 4.0,
+      "total_windows": 80,
+      "minutes_to_alert": 12.0
+    },
+    {
+      "subject": "n4",
+      "label": 0,
+      "alert_window": 4.0,
+      "total_windows": 78,
+      "minutes_to_alert": 12.0
+    },
+    {
+      "subject": "n6",
+      "label": 0,
+      "alert_window": NaN,
+      "total_windows": 79,
+      "minutes_to_alert": NaN
+    },
+    {
+      "subject": "n7",
+      "label": 0,
+      "alert_window": NaN,
+      "total_windows": 79,
+      "minutes_to_alert": NaN
+    },
+    {
+      "subject": "n8",
+      "label": 0,
+      "alert_window": NaN,
+      "total_windows": 80,
+      "minutes_to_alert": NaN
+    },
+    {
+      "subject": "n9",
+      "label": 0,
+      "alert_window": NaN,
+      "total_windows": 80,
+      "minutes_to_alert": NaN
+    },
+    {
+      "subject": "plm10",
+      "label": 1,
+      "alert_window": NaN,
+      "total_windows": 80,
+      "minutes_to_alert": NaN
+    },
+    {
+      "subject": "plm2",
+      "label": 1,
+      "alert_window": NaN,
+      "total_windows": 79,
+      "minutes_to_alert": NaN
+    },
+    {
+      "subject": "plm3",
+      "label": 1,
+      "alert_window": 10.0,
+      "total_windows": 80,
+      "minutes_to_alert": 30.0
+    },
+    {
+      "subject": "plm4",
+      "label": 1,
+      "alert_window": 4.0,
+      "total_windows": 80,
+      "minutes_to_alert": 12.0
+    },
+    {
+      "subject": "plm5",
+      "label": 1,
+      "alert_window": 5.0,
+      "total_windows": 80,
+      "minutes_to_alert": 15.0
+    },
+    {
+      "subject": "plm6",
+      "label": 1,
+      "alert_window": 55.0,
+      "total_windows": 80,
+      "minutes_to_alert": 165.0
+    },
+    {
+      "subject": "plm7",
+      "label": 1,
+      "alert_window": 4.0,
+      "total_windows": 80,
+      "minutes_to_alert": 12.0
+    },
+    {
+      "subject": "plm8",
+      "label": 1,
+      "alert_window": 10.0,
+      "total_windows": 80,
+      "minutes_to_alert": 30.0
+    },
+    {
+      "subject": "plm9",
+      "label": 1,
+      "alert_window": 12.0,
+      "total_windows": 80,
+      "minutes_to_alert": 36.0
+    },
+    {
+      "subject": "sdb2",
+      "label": 1,
+      "alert_window": NaN,
+      "total_windows": 80,
+      "minutes_to_alert": NaN
+    },
+    {
+      "subject": "sdb3",
+      "label": 1,
+      "alert_window": NaN,
+      "total_windows": 80,
+      "minutes_to_alert": NaN
+    }
+  ],
+  "caveats": [
+    "Small-N curated subset; indicative metrics, not clinical claims.",
+    "Windows are non-overlapping; evaluation uses GroupKFold by recording to avoid leaking correlated windows across train/test.",
+    "All recordings truncated to a common 4h analysis window before windowing.",
+    "Model B trains only on CAP windows with a real, parseable ECG channel.",
+    "CUSUM target/k/h are fit on this run's normal-window score distribution; re-fit if the model or feature set changes.",
+    "PSG-derived features are proxies for radio-sensed ones; hardware needs calibration."
+  ]
+}

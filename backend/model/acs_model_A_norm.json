@@ -1,0 +1,143 @@
+{
+  "feature_order": [
+    "breathing_rate_bpm",
+    "breathing_var",
+    "motion_index",
+    "sleep_fragmentation_index",
+    "sleep_onset_latency",
+    "breathing_rate_bpm_zbase",
+    "breathing_var_zbase",
+    "motion_index_zbase",
+    "sleep_fragmentation_index_zbase",
+    "breathing_rate_bpm_delta",
+    "breathing_var_delta",
+    "motion_index_delta",
+    "sleep_fragmentation_index_delta"
+  ],
+  "per_source_zscore": {
+    "cap:breathing_rate_bpm": [
+      19.14799749687109,
+      3.9538758564038856
+    ],
+    "cap:breathing_var": [
+      1.487171464330413,
+      1.4928882337552398
+    ],
+    "cap:motion_index": [
+      0.5822302955093811,
+      0.21459127612553844
+    ],
+    "cap:sleep_fragmentation_index": [
+      7.181360544217688,
+      6.774395863158648
+    ],
+    "cap:sleep_onset_latency": [
+      99.73276515151515,
+      70.3909785020435
+    ],
+    "cap:breathing_rate_bpm_zbase": [
+      -0.990855010931985,
+      3.890863303865524
+    ],
+    "cap:breathing_var_zbase": [
+      -0.5236718148053561,
+      2.8486754478203475
+    ],
+    "cap:motion_index_zbase": [
+      3.7582554775691355,
+      10.515437945321969
+    ],
+    "cap:sleep_fragmentation_index_zbase": [
+      0.5365937994003482,
+      2.046422575439104
+    ],
+    "cap:breathing_rate_bpm_delta": [
+      -0.010331872260488416,
+      3.8377046733355904
+    ],
+    "cap:breathing_var_delta": [
+      -0.008453350031308704,
+      1.8428619556849801
+    ],
+    "cap:motion_index_delta": [
+      0.0025870065517041552,
+      0.19652941379847153
+    ],
+    "cap:sleep_fragmentation_index_delta": [
+      0.04214285714285714,
+      2.1214692849291366
+    ],
+    "sleep_edf:breathing_rate_bpm": [
+      19.8765625,
+      1.385047628637279
+    ],
+    "sleep_edf:breathing_var": [
+      0.884375,
+      0.7136435450384176
+    ],
+    "sleep_edf:motion_index": [
+      0.4049787280528264,
+      0.08808723858803146
+    ],
+    "sleep_edf:sleep_fragmentation_index": [
+      0.0,
+      1.0
+    ],
+    "sleep_edf:sleep_onset_latency": [
+      0.0,
+      NaN
+    ],
+    "sleep_edf:breathing_rate_bpm_zbase": [
+      -0.453300034285646,
+      2.479403220735394
+    ],
+    "sleep_edf:breathing_var_zbase": [
+      0.1941616233182665,
+      2.9112374510117296
+    ],
+    "sleep_edf:motion_index_zbase": [
+      -0.26391274268003945,
+      2.6764412793531234
+    ],
+    "sleep_edf:sleep_fragmentation_index_zbase": [
+      0.0,
+      1.0
+    ],
+    "sleep_edf:breathing_rate_bpm_delta": [
+      0.00234375,
+      1.7094619422016795
+    ],
+    "sleep_edf:breathing_var_delta": [
+      0.00390625,
+      1.0025282371140165
+    ],
+    "sleep_edf:motion_index_delta": [
+      -0.0006319809912921496,
+      0.1122292558371273
+    ],
+    "sleep_edf:sleep_fragmentation_index_delta": [
+      0.0,
+      1.0
+    ]
+  },
+  "impute_fill": {
+    "breathing_rate_bpm": -0.03743099233411303,
+    "breathing_var": -0.32632815592964554,
+    "motion_index": -0.030197323477564177,
+    "sleep_fragmentation_index": 0.0,
+    "sleep_onset_latency": -0.04237425327776288,
+    "breathing_rate_bpm_zbase": 0.0729268050778184,
+    "breathing_var_zbase": -0.05465501722933383,
+    "motion_index_zbase": -0.2129327643357033,
+    "sleep_fragmentation_index_zbase": 0.0,
+    "breathing_rate_bpm_delta": 0.002692200974263175,
+    "breathing_var_delta": 0.004587077184610199,
+    "motion_index_delta": -0.010669475009352026,
+    "sleep_fragmentation_index_delta": -0.01986493862637509
+  },
+  "operating_threshold": 0.0011028688733362088,
+  "window_seconds": 180,
+  "settle_windows": 3,
+  "frag_lookback_min": 30,
+  "note": "Backend must maintain a per-session rolling buffer of the first settle_windows windows to compute *_zbase/*_delta features live. Live hardware ('esp32_csi') needs its own calibration pass."
+}
